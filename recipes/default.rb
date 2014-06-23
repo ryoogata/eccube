@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-mysql_database 'node["eccube"]["database"]["_DATABASE_NAME"]' do 
+mysql_database "#{node['eccube']['database']['_DATABASE_NAME']}" do 
   connection( :host => 'localhost', :username => 'root', :password => node['mysql']['server_root_password'] )
   action :create
 end
